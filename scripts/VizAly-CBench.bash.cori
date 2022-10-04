@@ -1,15 +1,18 @@
 module unload PrgEnv-intel
 module load PrgEnv-gnu
-module load cmake/3.14.4
+module load cmake/3.22.1
+# module load cmake/3.14.4
 module load gsl/2.5
-module load cray-mpich/7.7.6
+module load cray-mpich/7.7.19
+# module load cray-mpich/7.7.6
 module load cray-fftw
-module load vim
+# module load vim
 module load openmpi
 module load zlib/1.2.11
 module unload darshan
-module load cray-hdf5-parallel/1.10.2.0
-module load python/3.6-anaconda-4.4
+module load cray-hdf5-parallel/1.12.1.1
+# module load cray-hdf5-parallel/1.10.2.0
+module load python/3.9-anaconda-2021.11
 
 export CC="cc -dynamic -fPIC"
 export CXX="CC -dynamic -fPIC"

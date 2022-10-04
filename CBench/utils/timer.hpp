@@ -41,7 +41,7 @@ inline Timer::~Timer() {}
 
 inline void   Timer::start() { startTime = std::chrono::system_clock::now(); }
 inline void   Timer::stop() { endTime = std::chrono::system_clock::now(); elapsed_seconds = endTime - startTime; }
-inline double Timer::stop(int x) { endTime = std::chrono::system_clock::now(); elapsed_seconds = endTime - startTime; }
+inline double Timer::stop(int x) { endTime = std::chrono::system_clock::now(); elapsed_seconds = endTime - startTime; return elapsed_seconds.count();}
 inline double Timer::getDuration() { return elapsed_seconds.count(); }
 
 inline double Timer::getCurrentDuration()
