@@ -27,9 +27,9 @@ class CompressorInterface
     std::unordered_map<std::string, std::string> compressorParameters;
 
   protected:
-    std::string compressorName;		// internal compressor name
-    std::stringstream log;			// logfile stream
-    size_t cbytes;					// compressed stream size in bytes
+    std::string compressorName;        // internal compressor name
+    std::stringstream log;            // logfile stream
+    size_t cbytes;                    // compressed stream size in bytes
 
   public:
     virtual void init() = 0;
@@ -42,7 +42,7 @@ class CompressorInterface
     std::string getLog() { return log.str(); }
     size_t getCompressedSize(){ return cbytes; }
     std::string getParamsInfo();
-	void clearLog() { log.str(""); }
+    void clearLog() { log.str(""); }
 };
 
 

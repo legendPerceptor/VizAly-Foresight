@@ -6,5 +6,6 @@
 #include "SZ/SZcompressor.hpp"
 #include "SZ_gpu/SZcompressorGpu.hpp"
 #include "fpzip/fpzipcompressor.hpp"
+#include "libpressio/LibpressioCompressor.hpp"
 #include "zfp/zfpCompressor.hpp"
 #include "zfp_gpu/zfpCompressorGpu.hpp"

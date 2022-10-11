@@ -36,87 +36,87 @@ $ python3 -m pat.nyx.workflow --input-file ../inputs/nyx/darwin_nyx_galton_wflow
 
 ### Options
 Available:
- 	* --preview
-	* --cinema
-	* --analysis_cinema
-	* --cbench 
+    s* --preview
+    * --cinema
+    * --analysis_cinema
+    * --cbench 
 
 Append the following options for the behavior below
 * --preview: only create the scripts but do not launch them
 
 * --analysis_cinema: opmits CBench, existing output files must be provided
-	* metrics file must be proivided in ["inputs"] e.g.
-		```
-		"input": 
-		{
-			"metrics-csv" : "/projects/VizAly-Foresight/test/metrics_.csv",
-			.
-			.
-			.
-		}
-		```
-	* paths of files must be provided ["pat"] e.g.
-		```
-		"pat" :
-		{
-			.
-			.
-			.
+    * metrics file must be proivided in ["inputs"] e.g.
+        ```
+        "input": 
+        {
+            "metrics-csv" : "/projects/VizAly-Foresight/test/metrics_.csv",
+            .
+            .
+            .
+        }
+        ```
+    * paths of files must be provided ["pat"] e.g.
+        ```
+        "pat" :
+        {
+            .
+            .
+            .
 
-			"input-files": [
-	            {
-	                "output-prefix": "orig",
-	                "path": "/projects/VizAly-Foresight/testing/data/z255_32.h5"
-	            },
-	            {
-	                "output-prefix": "SZ_",
-	                "path": "/projects/VizAly-Foresight/test/cbench/decompressed_files/SZ___z255_32.h5"
-	            }
-	        ]
-	    }
-	    ```
+            "input-files": [
+                {
+                    "output-prefix": "orig",
+                    "path": "/projects/VizAly-Foresight/testing/data/z255_32.h5"
+                },
+                {
+                    "output-prefix": "SZ_",
+                    "path": "/projects/VizAly-Foresight/test/cbench/decompressed_files/SZ___z255_32.h5"
+                }
+            ]
+        }
+        ```
 * --cinema: only produces cinema output from existing CBench and analysis runs. 
-	* metrics and analysis-results location must be proivided in ["inputs"] and  e.g.
-		```
-			"input": 
-			{
-				"metrics-csv" : "/projects/VizAly-Foresight/test/metrics_.csv",
-				"analysis-results" : "/projects/VizAly-Foresight/testB/",
-				.
-				.
-				.
-			}
-		```
-	* paths of files must be provided e.g.
-		```
-		"pat" :
-		{
-			.
-			.
-			.
+    * metrics and analysis-results location must be proivided in ["inputs"] and  e.g.
+        ```
+            "input": 
+            {
+                "metrics-csv" : "/projects/VizAly-Foresight/test/metrics_.csv",
+                "analysis-results" : "/projects/VizAly-Foresight/testB/",
+                .
+                .
+                .
+            }
+        ```
+    * paths of files must be provided e.g.
+        ```
+        "pat" :
+        {
+            .
+            .
+            .
 
-			"input-files": [
-	            {
-	                "output-prefix": "orig",
-	                "path": "/projects/VizAly-Foresight/testing/data/z255_32.h5"
-	            },
-	            {
-	                "output-prefix": "SZ_",
-	                "path": "/projects/VizAly-Foresight/test/cbench/decompressed_files/SZ___z255_32.h5"
-	            }
-	        ]
-	    }
-	    ```
+            "input-files": [
+                {
+                    "output-prefix": "orig",
+                    "path": "/projects/VizAly-Foresight/testing/data/z255_32.h5"
+                },
+                {
+                    "output-prefix": "SZ_",
+                    "path": "/projects/VizAly-Foresight/test/cbench/decompressed_files/SZ___z255_32.h5"
+                }
+            ]
+        }
+        ```
 * --cbench: only runs CBench
-		```
-		"pat" :
-		{
-			.
-			.
-			.
+        ```
+        "pat" :
+        {
+            .
+            .
+            .
 
-			"input-files": [],
-			"analysis": []
-	    }
-	    ```
-	
+            "input-files": [],
+            "analysis": []
+        }
+        ```
+    

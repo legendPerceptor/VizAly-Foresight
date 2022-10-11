@@ -19,9 +19,9 @@ Authors:
 
 inline void writeFile(std::string filename, std::string log)
 {
-	std::ofstream outputFile( filename.c_str(), std::ios::out);
-	outputFile << log;
-	outputFile.close();
+    std::ofstream outputFile( filename.c_str(), std::ios::out);
+    outputFile << log;
+    outputFile.close();
 }
 
 
@@ -29,9 +29,9 @@ inline void writeFile(std::string filename, std::string log)
 inline void writeLog(std::string filename, std::string log)
 {
   #ifndef NDEBUG
-	std::ofstream outputFile( (filename + ".log").c_str(), std::ios::out);
-	outputFile << log;
-	outputFile.close();
+    std::ofstream outputFile( (filename + ".log").c_str(), std::ios::out);
+    outputFile << log;
+    outputFile.close();
   #endif
 }
 
@@ -39,9 +39,9 @@ inline void writeLog(std::string filename, std::string log)
 inline void writeLog(std::string filename, std::stringstream log)
 {
   #ifndef NDEBUG
-	std::ofstream outputFile( (filename + ".log").c_str(), std::ios::out);
-	outputFile << log.str();
-	outputFile.close();
+    std::ofstream outputFile( (filename + ".log").c_str(), std::ios::out);
+    outputFile << log.str();
+    outputFile.close();
   #endif
 }
 
@@ -50,20 +50,20 @@ inline void writeLog(std::string filename, std::stringstream log)
 inline void appendLog(std::string filename, std::string log)
 {
   #ifndef NDEBUG
-	std::ofstream outputFile( (filename + ".log").c_str(), std::ios::out | std::ios::app);
-	outputFile << log;
-	outputFile.close();
+    std::ofstream outputFile( (filename + ".log").c_str(), std::ios::out | std::ios::app);
+    outputFile << log;
+    outputFile.close();
   #endif
 }
 
 inline void appendLog(std::string filename, std::stringstream & log)
 {
   #ifndef NDEBUG
-	std::ofstream outputFile( (filename + ".log").c_str(), std::ios::out | std::ios::app);
-	outputFile << log.str();
-	outputFile.close();
+    std::ofstream outputFile( (filename + ".log").c_str(), std::ios::out | std::ios::app);
+    outputFile << log.str();
+    outputFile.close();
 
-	log.str("");	// clears the log
+    log.str("");    // clears the log
   #endif
 }
 
