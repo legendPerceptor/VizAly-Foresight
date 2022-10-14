@@ -1,7 +1,7 @@
 {
-    "project-home": "/global/cscratch1/sd/pascal/exasky/",
+    "project-home": "/global/homes/y/yuanjian/test_viz/",
     "wflow-path": "Nyx__512_42__fpzip__",
-    "foresight-home" : "/project/projectdirs/m2848/lanl/VizAly-Foresight/",
+    "foresight-home" : "/global/homes/y/yuanjian/VizAly-Foresight/",
 
     "input": 
     {
@@ -184,8 +184,8 @@
             "nodes" : 8,
             "constraint" : "haswell",
             "qos" : "regular",
-            "time" : "08:59:59",
-            "account" : "m2848"
+            "time" : "00:29:59",
+            "account" : "m3919"
         }
     },
 
@@ -196,7 +196,7 @@
 
         "analysis-tool": 
         {
-            "gimlet-home": "/project/projectdirs/m2848/lanl/gimlet2",
+            "gimlet-home": "/project/projectdirs/m3919/lanl/gimlet2",
 
             "analytics": 
             [
@@ -204,14 +204,14 @@
                     "name": "sim_stats",
                     "type": ["rhob", "rhom", "rhodm", "temp", "velmag", "vz"],
                     "postfix": "_ps3d.txt",
-                    "path": "srun -n 64 -c 6 /project/projectdirs/m2848/lanl/gimlet2/apps/sim_stats/sim_stats.ex",
+                    "path": "srun -n 64 -c 6 /project/projectdirs/m3919/lanl/gimlet2/apps/sim_stats/sim_stats.ex",
                     "configuration" : 
                     {
                         "nodes" : 8,
                         "constraint" : "haswell",
                         "qos" : "regular",
                         "time" : "08:59:59",
-                        "account" : "m2848"
+                        "account" : "m3919"
                     }
                 },
 
@@ -219,15 +219,15 @@
                     "name": "lya_all_axes",
                     "type": ["x", "y", "z"],
                     "postfix": "_flux_ps1d.txt",
-                    "path": "srun -n 64 -c 6 /project/projectdirs/m2848/lanl/gimlet2/apps/lya_all_axes/lya_all_axes.ex",
-                    "command": "cp /project/projectdirs/m2848/lanl/gimlet2/treecools/TREECOOL_middle .",
+                    "path": "srun -n 64 -c 6 /project/projectdirs/m3919/lanl/gimlet2/apps/lya_all_axes/lya_all_axes.ex",
+                    "command": "cp /project/projectdirs/m3919/lanl/gimlet2/treecools/TREECOOL_middle .",
                     "configuration" : 
                     {
                         "nodes" : 8,
                         "constraint" : "haswell",
                         "qos" : "regular",
                         "time" : "08:59:59",
-                        "account" : "m2848"
+                        "account" : "m3919"
                     }
                 }
             ]
@@ -253,7 +253,7 @@
             "constraint" : "haswell",
             "qos" : "debug",
             "time" : "00:29:59",
-            "account" : "m2848"
+            "account" : "m3919"
         }
     }
 }
