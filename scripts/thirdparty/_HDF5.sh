@@ -8,7 +8,7 @@ echo $PLATFORM
 if [ "$PLATFORM" = "travis" ]; then
 	echo "Travis: Using docker HDF5 build"
 else
-	git clone https://bitbucket.hdfgroup.org/scm/hdffv/hdf5.git
+	git clone https://github.com/HDFGroup/hdf5
 	cd hdf5
 	git checkout hdf5-1_10_3
 	mkdir install

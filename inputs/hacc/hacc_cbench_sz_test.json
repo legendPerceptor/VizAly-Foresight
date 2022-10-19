@@ -1,0 +1,82 @@
+{
+    "project-home" : "/home/parallels/Development/SZ3Research/VizAly-Foresight/playground/",
+    "foresight-home" : "/home/parallels/Development/SZ3Research/VizAly-Foresight",
+    "wflow-path" : "HACC_SZ_test_",
+
+    "input": 
+    {
+        "filetype": "HACC",
+        "filename": "../testing/data/m000.full.mpicosmo.50",
+
+        "scalars": ["x", "y", "z", "vx", "vy", "vz"]    
+    },
+
+    "compressor-comment" : "which compressors to test",
+    "compressors" : 
+    [
+        {
+            "name": "SZ",
+            "output-prefix" : "sz_abs_.01_",
+            "abs" : 1E-2
+        }
+    ],
+
+    "pat": 
+    {
+        "evn_path": "",
+
+        "analysis-tool": 
+        {
+            "gimlet-home": "",
+
+            "analytics": 
+            []
+        },
+
+        "input-files": [],
+
+        "analysis": []
+    },
+
+    
+    "cbench": 
+    {
+        "path" : "",
+
+        "output" :
+        {
+            "run-path" : "build/",
+
+            "output-decompressed": true,
+            "output-decompressed-location" : "decompressed_files",
+            
+            "log-file" : "runlog_hacc_test_",
+            "metrics-file" : "metrics_hacc_test_"
+        },
+
+
+    "metrics": [
+      {
+        "name": "absolute_error",
+        "histogram": [ "x", "vx" ]
+      },
+
+      {
+        "name": "relative_error"
+      },
+
+      {
+        "name": "mse"
+      },
+
+      {
+        "name": "psnr"
+      },
+
+      {
+        "name": "minmax",
+        "histogram": [ "x", "vx" ]
+      }
+    ]
+    }
+}

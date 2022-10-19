@@ -1,7 +1,7 @@
 {
-	"project-home" : "",
-	"foresight-home" : "",
-	"wflow-path" : "",
+	"project-home" : "/home/parallels/Development/test_viz",
+	"foresight-home" : "/home/parallels/Development/SZ3Research/VizAly-Foresight",
+	"wflow-path" : "HACC_CBENCH_OVERALL_TEST",
 
 	"input": 
 	{
@@ -37,6 +37,23 @@
             "abs" : 1E-2
 		}
 	],
+
+	"pat": 
+    {
+        "evn_path": "",
+
+        "analysis-tool": 
+        {
+            "gimlet-home": "",
+
+            "analytics": 
+            []
+        },
+
+        "input-files": [],
+
+        "analysis": []
+    },
 
 	
 	"cbench": 
