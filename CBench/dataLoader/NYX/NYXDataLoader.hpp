@@ -477,9 +477,9 @@ inline void NYXDataLoader::writeGroupData(
 	hid_t filespace = H5Dget_space(dset_id[0]);
 	H5Sselect_hyperslab(filespace, H5S_SELECT_SET, offset, NULL, count, NULL);
 	hid_t plist_id = H5Pcreate(H5P_DATASET_XFER);
-#ifndef _WIN32
-	H5Pset_dxpl_mpio(plist_id, H5FD_MPIO_COLLECTIVE);
-#endif
+//#ifndef _WIN32
+//	H5Pset_dxpl_mpio(plist_id, H5FD_MPIO_COLLECTIVE);
+//#endif
 
 	field_index = 0;
 	for (auto && item : group_data)
@@ -580,9 +580,9 @@ inline int NYXDataLoader::writeData(std::string in_filename)
 	log << "writing to " << in_filename << std::endl;
 
 	hid_t plist_id = H5Pcreate(H5P_FILE_ACCESS);
-#ifndef _WIN32
-	H5Pset_fapl_mpio(plist_id, comm, MPI_INFO_NULL);
-#endif
+//#ifndef _WIN32
+//	H5Pset_fapl_mpio(plist_id, comm, MPI_INFO_NULL);
+//#endif
 
 	hid_t file_id = H5Fcreate(in_filename.c_str(), H5F_ACC_TRUNC, H5P_DEFAULT, plist_id);
 

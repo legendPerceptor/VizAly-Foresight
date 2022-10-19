@@ -5,6 +5,7 @@ if (CBENCH_COMPRESSOR_SZ)
 
     #Asks for SZ library + set that in EXTRA_LIBS
     find_library(SZ_LIBRARY ${SZ_LIBRARY} CACHE STRING "SZ library")
+	message("SZ_LIB:" ${SZ_LIBRARY})
     if (NOT SZ_LIBRARY)
     	message(FATAL_ERROR "Could NOT find SZ")
     else()
